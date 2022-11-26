@@ -68,7 +68,7 @@ public class Game extends Canvas implements Runnable,KeyListener,MouseListener{
       spritesheet = new Spritesheet("/spritesheet.png");
       enemiessheet = new Spritesheet("/Enemies/Dog_idle.png");
       
-      player = new Player(0,0,64,64,spritesheet.getSprite(0,64,64,64));
+      player = Entity.createPlayer(0, 0);
       entities.add(player);
       world = new World("/world.png");
   }

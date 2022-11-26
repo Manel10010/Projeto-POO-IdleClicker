@@ -32,6 +32,16 @@ public abstract class Entity {
 		this.maskw = width;
 		this.maskh = height;
 	}
+	//Builder
+	public static Enemy createEnemyDog(int xx, int yy) {
+		Enemy en = new Enemy(xx*16,yy*16-16,32,32, Entity.ENEMY_EN, "Street Dog");
+		return en;
+	}
+	
+	public static Player createPlayer(int x, int y) {
+		Player player = new Player(x,y,64,64,Game.spritesheet.getSprite(0,64,64,64));
+		return player;
+	}
 	
 	//Métodos especiais
 	

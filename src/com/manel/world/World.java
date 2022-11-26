@@ -32,36 +32,36 @@ public class World {
 					if (pixelAtual == 0xFF4CFF00) {
 						//Grama
 						System.out.println("TERRA");
-						tiles[xx + (yy* WIDTH)] = new GrassTile(xx*16,yy*16,Tile.TILE_GRASS);
+						tiles[xx + (yy* WIDTH)] = new GrassTile(xx*16,yy*16);
 					} else if (pixelAtual == 0xFF7F3300) {
 						//Terra
-						tiles[xx + (yy* WIDTH)] = new DirtTile(xx*16,yy*16,Tile.TILE_DIRT);
+						tiles[xx + (yy* WIDTH)] = new DirtTile(xx*16,yy*16);
 					}else if (pixelAtual == 0xFF0094FF) {
 						//Céu
-						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16,Tile.TILE_SKY);
+						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16);
 					}else if (pixelAtual == 0xFFFFFFFF) {
 						//Núvem
-						tiles[xx + (yy* WIDTH)] = new CloudTile(xx*16,yy*16,Tile.TILE_CLOUD);
+						tiles[xx + (yy* WIDTH)] = new CloudTile(xx*16,yy*16);
 					} else if (pixelAtual == 0xFFFFD800) {
 						//Player
 						System.out.println("PLAYER");
 						Game.player.setX(xx*16);
 						Game.player.setY(yy*13+8);
-						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16,Tile.TILE_SKY);
+						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16);
 					}else if (pixelAtual == 0xFFFF0000) {
 						//Enemy
-						Enemy en = new Enemy(xx*16,yy*16-16,32,32, Entity.ENEMY_EN, "Street Dog");
+						Enemy en = Entity.createEnemyDog(xx, yy);
 						Game.entities.add(en);
 						Game.enemies.add(en);
-						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16,Tile.TILE_SKY);
+						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16);
 					}else if (pixelAtual == 0xFFFF00DC){
 						//Life Pack
 						Lifepack pack = new Lifepack(xx*16,yy*16,16,16,Entity.LIFE_PACK_EN);
 						Game.entities.add(pack);
-						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16,Tile.TILE_SKY);
+						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16);
 					}else {
 						//Céu
-						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16,Tile.TILE_SKY);
+						tiles[xx + (yy* WIDTH)] = new SkyTile(xx*16,yy*16);
 					}
 				}
 			}
