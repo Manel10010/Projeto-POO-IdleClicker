@@ -93,3 +93,12 @@ Esse estilo de jogo foi escolhido por ser do gosto pessoal dos desenvolvedores e
 >   - **Vínculo com Apolo** - Após usar varias habilidades que utilizam da sua fé e absorver dano com escudos de luz (resultado de outras habilidades) o paladino aumenta temporariamente seu vínculo com Apolo, ao chegar em 100% de vinculo ele tem acesso ao Ataque de Apolo.
 >
 >   - **Ataque de Apolo** - Um ataque que vem do céu como um feixe de luz causando dano em área (baseado em nível e fé) o ataque só pode ser utilizado se o vínculo com Apolo estiver em 100%. Ao utilizar essa habilidade o vínculo com Apolo é temporariamente bloqueado e o total da porcentagem é removido em 50%.
+
+
+
+
+# Design Patterns Utilizados
+Command - O design pattern command foi utilizado na parte dos listeners de ações.
+Builder - O design pattern Builder foi utilizado na parte das instancias de Entities, quando muitos inimigos ou coisas como Tiles podem ser diferentes esse metodo facilita essa construção de diferentes coisas.
+Strategy - O design pattern Strategy fica bem aparente quando olhamos para a parte de renderização das coisas na tela, pois cada classe tem sua forma de redenrizar assiando o contrato com a interface Canva.
+Strategy - O design pttern Strategy é usado na criação dos tiles do mundo, tendo como interface Tile
