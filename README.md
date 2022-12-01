@@ -100,7 +100,7 @@ Esse estilo de jogo foi escolhido por ser do gosto pessoal dos desenvolvedores e
 # Design Patterns Utilizados
 Command - O design pattern command foi utilizado na parte dos listeners de ações.
 Builder - O design pattern Builder foi utilizado na parte das instancias de Entities, quando muitos inimigos ou coisas como Tiles podem ser diferentes esse metodo facilita essa construção de diferentes coisas.
-Strategy - O design pattern Strategy fica bem aparente quando olhamos para a parte de renderização das coisas na tela, pois cada classe tem sua forma de redenrizar assiando o contrato com a interface Canva.
+Facade - O design pattern Facade fica bem aparente na classe Game pois nela que temos basicamente a junção e a instancia/execução de tudo.
 Strategy - O design pttern Strategy é usado na criação dos tiles do mundo, tendo como interface Tile
 
 
